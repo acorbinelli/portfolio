@@ -5,14 +5,13 @@
 }
 
 body {
-  overflow: hidden;
 }
 
 /* --------------------------------- homepage section */
 #home {
   background-color: #f8f1f1;
   font-family: "Montserrat", sans-serif;
-  min-width: 300px;
+
   word-wrap: none;
 }
 
@@ -23,7 +22,6 @@ body {
   justify-content: space-between;
   text-align: center;
   align-items: center;
-  width: 100vw;
 }
 
 .navbar-logo {
@@ -129,6 +127,11 @@ body {
   color: #19456b;
 }
 
+/* about section */
+#aboutme {
+  background-color: #f8f1f1;
+  height: 100vh;
+}
 /* screen res error */
 
 .screenResError {
