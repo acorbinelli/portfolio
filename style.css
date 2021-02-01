@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#home {
+  background-color: #f8f1f1;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.navbar-logo {
+  margin: 1rem;
+}
+.navbar-logo img {
+  width: 50px;
+}
+
+.menu-list {
+  display: none;
+}
+.navbar-contactButton {
+  display: none;
+}
+
+.hamburger-menu {
+  margin: 1rem;
+  font-size: 2rem;
+}
+.fas {
+  color: #11698e;
+}
+.fas:hover,
+.fas:active {
+  color: #16c79a;
+}
+
+@media (min-width: 480px) {
+  body {
+    background: green;
+  }
+}
