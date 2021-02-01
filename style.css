@@ -7,6 +7,8 @@
 body {
   overflow: hidden;
 }
+
+/* --------------------------------- homepage section */
 #home {
   background-color: #f8f1f1;
   font-family: "Montserrat", sans-serif;
@@ -21,7 +23,9 @@ body {
   justify-content: space-between;
   text-align: center;
   align-items: center;
+  width: 100vw;
 }
+
 .navbar-logo {
   margin: 1rem;
 }
@@ -31,40 +35,16 @@ body {
 
 .menu-list {
   display: none;
-  text-align: left;
-  background-color: #16c79a;
-  font-size: 2rem;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  z-index: 0;
-  left: 0;
-  top: 0;
 }
 
-.menu-list-item {
-  display: block;
-  margin: 3rem 1rem;
-
-  padding-right: 1rem;
-}
-
-.menu-list-item a {
-  text-decoration: none;
-  color: #19456b;
-}
-.menu-list-item a:hover,
-.menu-list-item a:active {
-  color: #f8f1f1;
-}
 .navbar-contactButton {
   display: none;
 }
 
 .hamburger-menu {
-  margin: 1rem 0.5rem;
+  margin: 1rem 1rem;
 
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -113,27 +93,47 @@ body {
 }
 .hero h2 {
   font-size: 1.5rem;
+  line-height: 2rem;
 }
 .hero h3 {
   font-size: 1.3rem;
+  line-height: 2rem;
 }
 .hero-image {
   text-align: center;
 }
 .hero img {
-  width: 200px;
+  width: 250px;
 }
+
+.hero-buttons {
+  height: 3rem;
+  margin-top: 2rem;
+}
+.hero-buttons button {
+  height: 100%;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  background-color: #11698e;
+  border-style: none;
+  color: #f8f1f1;
+  border-radius: 10px;
+}
+.hero-buttons button:active,
+:focus {
+  border-style: none;
+  outline: none;
+  background-color: #16c79a;
+  color: #19456b;
+}
+
 /* screen res error */
 
 .screenResError {
   display: none;
   color: white;
-}
-
-@media (min-width: 480px) {
-  body {
-    background: green;
-  }
 }
 
 @media (max-width: 250px) {
@@ -150,5 +150,111 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+@media (min-width: 480px) {
+  html {
+    background-color: black;
+  }
+
+  .hero {
+    display: flex;
+    background-color: #11698e;
+  }
+
+  .hero-text {
+    width: 100%;
+    color: #f8f1f1;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+  .hero h2 {
+    font-size: 1rem;
+  }
+  .hero h3 {
+    font-size: 0.9rem;
+  }
+  .hero-buttons {
+    margin-top: 1rem;
+  }
+  .hero-buttons button {
+    font-size: 0.8rem;
+    margin-right: 5px;
+    background-color: #f8f1f1;
+    color: #11698e;
+    cursor: pointer;
+  }
+  .hero-buttons button:hover {
+    font-size: 0.8rem;
+    margin-right: 5px;
+    background-color: #11698e;
+    color: #f8f1f1;
+    cursor: pointer;
+  }
+  .hero-buttons button:active {
+    border-style: none;
+    outline: none;
+    background-color: #16c79a;
+    color: #19456b;
+  }
+
+  .hero-image {
+    text-align: right;
+    display: inline;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-right: auto;
+  }
+  .hero img {
+    width: 200px;
+  }
+  .hero-text-and-buttons {
+    height: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 740px) {
+  .menu-list {
+    display: block;
+    background-color: transparent;
+    font-size: 1.2rem;
+    height: auto;
+    width: auto;
+    position: relative;
+  }
+  .menu-list-item {
+    display: inline;
+    margin: 0 1rem;
+    padding: 0;
+  }
+
+  .menu-list-item a {
+    text-decoration: none;
+    color: #19456b;
+  }
+
+  .navbar-contactButton {
+    display: block;
+    margin-right: 1rem;
+  }
+  .navbar-contactButton button {
+    height: 100%;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    background-color: #11698e;
+    border-style: none;
+    color: #f8f1f1;
+    border-radius: 10px;
+  }
+
+  .hamburger-menu {
+    display: none;
   }
 }
