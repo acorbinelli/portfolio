@@ -34,24 +34,42 @@
   <body>
     <section id="home">
       <div class="navbar">
-        <div class="navbar-logo">
-          <img src="logo.png" alt="" />
-        </div>
+        <img class="navbar-logo" src="logo.png" alt="Website Logo" />
 
-        <nav>
+        <nav id="top-nav" class="">
           <ul class="menu-list">
-            <li class="menu-list-item"><a href="#home">Home</a></li>
-            <li class="menu-list-item"><a href="#aboutme">About Me</a></li>
-            <li class="menu-list-item"><a href="#myskills">My Skills</a></li>
-            <li class="menu-list-item"><a href="#mycode">My Code</a></li>
+            <div class="menu-hero-image"><img src="hero.png" alt="" /></div>
+
+            <li class="menu-list-item">
+              <button type="submit" href="#home">Home</button>
+            </li>
+            <li class="menu-list-item">
+              <button type="submit" href="#aboutme">About Me</button>
+            </li>
+            <li class="menu-list-item">
+              <button type="submit" href="#myskills">My Skills</button>
+            </li>
+            <li class="menu-list-item">
+              <button type="submit" href="#mycode">My Code</button>
+            </li>
+            <li class="menu-list-item" id="downloadCV-NavButton">
+              <button type="submit" href="#downloadCV">Download my CV</button>
+            </li>
+            <li class="menu-list-item" id="contactMe-NavButton">
+              <button type="submit" href="#contactME">Contact Me</button>
+            </li>
           </ul>
         </nav>
         <div class="navbar-contactButton">
           <button type="submit">Contact Me</button>
         </div>
         <div class="hamburger-menu">
-          <a href="#"><i class="fas fa-bars open-menu"></i></a>
-          <a href="#"><i class="fas fa-times close-menu"></i></a>
+          <button type="submit" class="open-menu" href="#">
+            <i class="fas fa-bars"></i>
+          </button>
+          <button type="submit" class="close-menu display-none" href="#">
+            <i class="fas fa-times"></i>
+          </button>
         </div>
       </div>
       <div class="hero">
@@ -96,7 +114,9 @@
       integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
       crossorigin="anonymous"
     />
+
     <p class="screenResError">
+      <img class="navbar-logo" src="logo.png" alt="Website Logo" />
       I am sorry but your screen resolution is just too small to fit this
       website into. Please try a bigger screen :) ! Thanks.
     </p>
