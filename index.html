@@ -33,6 +33,18 @@
   </head>
   <body>
     <section id="home">
+      <div class="background-design display-none">
+        <i class="fab fa-js"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-react"></i>
+        <i class="fab fa-github"></i>
+        <i class="fab fa-node"></i>
+        <i class="fas fa-database"></i>
+        <i class="fas fa-server"></i>
+        <i class="fas fa-laptop"></i>
+        <i class="fas fa-mobile-alt"></i>
+      </div>
       <div class="navbar">
         <img class="navbar-logo" src="logo.png" alt="Website Logo" />
 
@@ -41,22 +53,24 @@
             <div class="menu-hero-image"><img src="hero.png" alt="" /></div>
 
             <li class="menu-list-item">
-              <button type="submit" href="#home">Home</button>
+              <button type="submit" id="nav-home-button">Home</button>
             </li>
             <li class="menu-list-item">
-              <button type="submit" href="#aboutme">About Me</button>
+              <button type="submit" id="nav-aboutme-button">About Me</button>
             </li>
             <li class="menu-list-item">
-              <button type="submit" href="#myskills">My Skills</button>
+              <button type="submit" id="nav-myskills-button">My Skills</button>
             </li>
             <li class="menu-list-item">
-              <button type="submit" href="#mycode">My Code</button>
+              <button type="submit" id="nav-mycode-button">My Code</button>
             </li>
-            <li class="menu-list-item" id="downloadCV-NavButton">
-              <button type="submit" href="#downloadCV">Download my CV</button>
+            <li class="menu-list-item">
+              <button type="submit" id="downloadCV-NavButton">
+                Download my CV
+              </button>
             </li>
-            <li class="menu-list-item" id="contactMe-NavButton">
-              <button type="submit" href="#contactME">Contact Me</button>
+            <li class="menu-list-item">
+              <button type="submit" id="contactMe-NavButton">Contact Me</button>
             </li>
           </ul>
         </nav>
@@ -91,19 +105,33 @@
           <img src="hero.png" alt="" />
         </div>
       </div>
+      <i class="fas fa-chevron-down"></i>
     </section>
     <section id="aboutme">
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
-      <h1>test</h1>
+      <div class="hamburger-menu">
+        <button type="submit" class="open-menu" href="#">
+          <i class="fas fa-bars"></i>
+        </button>
+        <button type="submit" class="close-menu display-none" href="#">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="aboutme-content">
+        <img
+          class="aboutme-image"
+          src="heroAbout.png"
+          alt="Picture of Alessandro Corbinelli"
+        />
+
+        <div class="aboutme-text">
+          <h1>#AboutMe</h1>
+          <h3>" Your tipical self-thought dev ? "</h3>
+          <h3>
+            No. I am all-in into making this a bright career and become someone
+            you value in your company.
+          </h3>
+        </div>
+      </div>
     </section>
     <section id="myskills"></section>
     <section id="mycode"></section>

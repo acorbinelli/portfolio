@@ -94,7 +94,9 @@ text {
 }
 
 /* --------------------------------- homepage section */
-
+#home {
+  height: 100vh;
+}
 /* navbar default */
 .navbar {
   display: flex;
@@ -196,10 +198,48 @@ text {
   filter: drop-shadow(0px 0px 5px #19456b);
 }
 
-/* about section */
+.fa-chevron-down {
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -2%);
+  font-size: 2rem;
+  color: #16c79a;
+}
+/* ---------------------------------- about section */
+#aboutme .hamburger-menu {
+  text-align: right;
+}
 #aboutme {
-  background-color: #f8f1f1;
+  background-image: linear-gradient(#11698e, #19456b);
   height: 100vh;
+}
+
+.aboutme-content {
+  position: relative;
+}
+
+.aboutme-image {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  width: 80%;
+  filter: opacity(0.2);
+}
+
+.aboutme-text {
+  position: absolute;
+  margin: 50% 1rem;
+  text-align: left;
+}
+
+.aboutme-text h1,
+.aboutme-text h2,
+.aboutme-text h3 {
+  color: #f8f1f1;
+  text-shadow: 2px 2px 10px #19456b;
+  font-weight: 400;
 }
 /* screen res error */
 
@@ -228,18 +268,50 @@ text {
     transform: translate(-50%, -50%);
   }
 }
+
+/* mobile resolution */
 @media (min-width: 473px) {
+  /* homepage --------------------------- */
+  #home {
+    background-image: linear-gradient(180deg, #19456b 10%, #11698e);
+    overflow: hidden;
+    position: relative;
+  }
+  .background-design {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    font-size: 2rem;
+    width: 720px;
+    height: 34px;
+    filter: opacity(0.3);
+  }
+
+  .background-design i {
+    color: #16c79a;
+    margin: 0 1rem;
+  }
+
+  .navbar {
+    margin-bottom: 20vh;
+  }
+  /* hero redesing for mobile */
   .hero {
     display: flex;
-    background-color: #11698e;
     background-image: linear-gradient(180deg, #19456b 10%, #11698e);
-
+    z-index: 1;
+    box-shadow: 0px 0px 20px 3px #19456b;
     height: 350px;
+    position: relative;
   }
 
   .hero-text-and-buttons {
     margin-left: auto;
     padding: 1rem;
+    width: 50%;
   }
   .hero-text > h1,
   h2,
@@ -280,6 +352,10 @@ text {
   .hero img {
     width: 270px;
   }
+
+  /* other homepage settings are default from top css file */
+
+  /* aboutme --------------------------- */
 }
 
 @media (min-width: 579px) {
@@ -288,11 +364,6 @@ text {
   }
   .navbar-logo {
     margin: 1rem;
-  }
-
-  #downloadCV-NavButton,
-  #contactMe-NavButton {
-    display: none;
   }
 
   .navbar-contactButton button {
@@ -307,6 +378,10 @@ text {
   }
 }
 @media (min-width: 733px) {
+  #downloadCV-NavButton,
+  #contactMe-NavButton {
+    display: none;
+  }
   .hamburger-menu {
     display: none;
   }
