@@ -11,8 +11,11 @@ body {
   background-color: #f8f1f1;
 }
 .container {
+  padding: 0 2rem;
   width: 100%;
-  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
 }
 
 h1,
@@ -23,6 +26,14 @@ h5,
 p,
 button {
   font-family: "Montserrat", sans-serif;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+}
+button {
+  background-color: #11698e;
+  color: #f8f1f1;
+  height: 2rem;
 }
 
 img {
@@ -31,13 +42,33 @@ img {
 
 i {
   font-size: 2rem;
+  color: #16c79a;
 }
 
 .displayNone {
   display: none;
 }
 
-@media (min-width: 320px) {
+/* specific defaults */
+
+.navbar {
+  height: 15%;
+  margin-bottom: 5%;
+  padding: 1rem 0;
+}
+
+.hero {
+  height: 70%;
+}
+@media (max-width: 279px) {
+  body {
+    background-color: black;
+  }
+  .container {
+    display: none;
+  }
+}
+@media (min-width: 280px) {
   /* boilerplate for 320px width screen */
   #home,
   #aboutme,
@@ -45,6 +76,108 @@ i {
   #mycode,
   #contactme {
     height: 100vh;
+    overflow: hidden;
+  }
+
+  /* #homepage */
+  /* default styles for 320px */
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    margin: 0;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
+    margin-bottom: auto;
+    text-align: center;
+  }
+
+  /* specific navbar content styles for 320px */
+  #top-nav,
+  .navbar-contactButton,
+  .close-menu {
+    display: none;
+  }
+  .open-menu {
+    display: block;
+  }
+  .open-menu i {
+    font-size: 1rem;
+    color: #f8f1f1;
+  }
+
+  .navbar-logo {
+    width: auto;
+
+    margin-right: auto;
+  }
+  .hamburger-menu {
+    margin: auto 0 auto auto;
+  }
+
+  /* specific hero content styles for 320px */
+  .hero-text-and-buttons,
+  .background-design {
+    margin-bottom: 1rem;
+  }
+
+  /* text */
+  .hero-text-and-buttons h1 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .hero-text-and-buttons h2 {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .hero-text-and-buttons h3 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  /* image */
+  .hero-image {
+    width: 55%;
+    margin: 0 auto;
+  }
+  /* icons */
+  .background-design i {
+    font-size: 1.5rem;
+  }
+
+  /* buttons */
+
+  .hero-button {
+    margin: 0 auto 0.5rem;
+    width: 160px;
+  }
+
+  /* #aboutme */
+  /* specific styles for 320px */
+  #aboutme {
+    background-color: green;
+  }
+  .aboutme-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* special IPHONE 5/SE resolution */
+@media screen and (device-aspect-ratio: 40/71) {
+  .hero {
+    height: 80vh;
+  }
+  /* image */
+  .hero-image {
+    width: 120px;
   }
 }
 @media (min-width: 480px) {

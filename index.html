@@ -78,19 +78,6 @@
           </div>
         </div>
         <div class="hero">
-          <div class="background-design">
-            <i class="fas fa-laptop"></i>
-            <i class="fas fa-mobile-alt"></i>
-
-            <i class="fab fa-js"></i>
-            <i class="fab fa-css3-alt"></i>
-            <i class="fab fa-html5"></i>
-            <i class="fab fa-react"></i>
-            <i class="fab fa-node"></i>
-            <i class="fab fa-github"></i>
-            <i class="fas fa-database"></i>
-            <i class="fas fa-server"></i>
-          </div>
           <div class="hero-text-and-buttons">
             <div class="hero-text">
               <h2>Hi, I am</h2>
@@ -98,16 +85,22 @@
               <h2>Junior Web Developer</h2>
               <h3>Got a job for me ?</h3>
             </div>
-
-            <div class="hero-buttons">
-              <button type="submit">Download My CV</button>
-              <button type="submit">Contact Me</button>
-            </div>
           </div>
 
-          <div class="hero-image">
-            <img src="hero.png" alt="" />
+          <img src="hero.png" alt="" class="hero-image" />
+
+          <div class="background-design">
+            <i class="fab fa-js"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-react"></i>
+
+            <i class="fab fa-github"></i>
+            <i class="fas fa-database"></i>
           </div>
+
+          <button type="submit" class="hero-button">Download My CV</button>
+          <button type="submit" class="hero-button">Contact Me</button>
         </div>
       </section>
       <section id="aboutme">
@@ -115,35 +108,34 @@
           <div class="aboutme-text">
             <h1>#AboutMe</h1>
             <h3>Not your tipical self-thought developer !</h3>
-
             <p>
-              <img
-                class="aboutme-image"
-                src="heroAbout.png"
-                alt="Picture of Alessandro  Corbinelli"
-              />
               I am all-in into making this a bright career and become someone
               you value in your company.
             </p>
-            <div class="myinterests">
-              <h2>My interests:</h2>
-              <div class="myinterests-icon-list">
-                <div class="icon-plus-text">
-                  <i class="fas fa-users"></i>
-                  <h3>Family</h3>
-                </div>
-                <div class="icon-plus-text">
-                  <i class="fas fa-microchip"></i>
-                  <h3>Tech</h3>
-                </div>
-                <div class="icon-plus-text">
-                  <i class="fas fa-gamepad"></i>
-                  <h3>Games</h3>
-                </div>
-                <div class="icon-plus-text">
-                  <i class="fas fa-plane"></i>
-                  <h3>Travel</h3>
-                </div>
+          </div>
+          <img
+            class="aboutme-image"
+            src="heroAbout.png"
+            alt="Picture of Alessandro  Corbinelli"
+          />
+          <div class="myinterests">
+            <h2>My interests:</h2>
+            <div class="myinterests-icon-list">
+              <div class="icon-plus-text">
+                <i class="fas fa-users"></i>
+                <h3>Family</h3>
+              </div>
+              <div class="icon-plus-text">
+                <i class="fas fa-microchip"></i>
+                <h3>Tech</h3>
+              </div>
+              <div class="icon-plus-text">
+                <i class="fas fa-gamepad"></i>
+                <h3>Games</h3>
+              </div>
+              <div class="icon-plus-text">
+                <i class="fas fa-plane"></i>
+                <h3>Travel</h3>
               </div>
             </div>
           </div>
@@ -159,7 +151,7 @@
         crossorigin="anonymous"
       />
 
-      <p class="screenResError">
+      <p class="screenResError displayNone">
         <img class="navbar-logo" src="logo.png" alt="Website Logo" />
         I am sorry but your screen resolution is just too small to fit this
         website into. Please try a bigger screen :) ! Thanks.
