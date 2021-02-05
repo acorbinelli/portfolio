@@ -15,7 +15,6 @@ body {
   width: 100%;
   max-width: 800px;
   margin: auto;
-  overflow: hidden;
 }
 
 h1,
@@ -73,13 +72,9 @@ i {
     display: none;
   }
 }
-@media (min-width: 280px) {
+@media only screen and (min-width: 280px) {
   /* boilerplate for 320px width screen */
-  #home,
-  #aboutme,
-  #myskills,
-  #mycode,
-  #contactme {
+  section {
     height: 100vh;
   }
 
@@ -95,11 +90,12 @@ i {
   .hero {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 80%;
     margin-bottom: auto;
     text-align: center;
-    overflow: hidden !important;
+    overflow: hidden;
+    position: relative;
   }
 
   /* specific navbar content styles for 320px */
@@ -133,10 +129,6 @@ i {
 
   /* specific hero content styles for 320px */
 
-  .hero {
-    position: relative;
-    overflow: hidden;
-  }
   .hero-text-and-buttons {
     margin-bottom: 1rem;
   }
@@ -157,7 +149,7 @@ i {
 
   /* image */
   .hero-image {
-    min-width: auto;
+    width: 70%;
     margin: 0 auto 0.5rem;
   }
   /* icons */
@@ -174,7 +166,7 @@ i {
     z-index: -1;
     height: 100%;
     width: 5rem;
-    overflow: hidden;
+
     opacity: 0.3;
   }
   .background-design i {
@@ -202,7 +194,7 @@ i {
 }
 
 /* special IPHONE 5/SE resolution */
-@media screen and (device-aspect-ratio: 40/71) {
+@media (device-aspect-ratio: 40/71) {
   .hero {
     height: 80vh;
   }
@@ -211,7 +203,7 @@ i {
     width: 120px;
   }
 }
-@media (min-width: 480px) {
+@media (min-width: 480px) and (orientation: portrait) {
   /* #homepage  - nav */
 
   /* #homepage  - hero */
@@ -235,14 +227,9 @@ i {
     margin: 0 auto 1rem 0.5rem;
   }
 
-  /*  .hero-image {
-    position: absolute;
-    right: 2rem;
-    top: 50%;
-    transform: translate(0, -50%);
-    width: 40%;
-    z-index: 0;
-  } */
+  .hero-image {
+    width: 60%;
+  }
 }
 @media (min-width: 768px) {
   /* general */
@@ -320,13 +307,64 @@ i {
     width: 160px;
   }
 }
-@media (min-width: 992px) {
-  /* 
-  button:hover {
+@media (min-width: 980px) {
+  /* default styles */
+  .container {
+    max-width: 90%;
+  }
+  #home {
     position: relative;
-    box-shadow: 0 1px 6px 0px #11698e;
-    top: -10px;
-  } */
+  }
+  .background-design {
+    position: absolute;
+    bottom: 35%;
+    left: 15%;
+    transform: translate(-50%, -35%) rotate(-45deg);
+    clear: both;
+  }
+  .background-design i {
+    font-size: 10rem;
+  }
+  /* navbar styles */
+  .navbar {
+    justify-content: space-between;
+  }
+  #top-nav {
+    width: auto;
+  }
+  .menu-list-item {
+    margin: 0 1rem;
+  }
+  .navbar-contactButton {
+    margin-right: 1rem;
+  }
+  /* hero styles */
+  .hero {
+    justify-content: center;
+    align-items: flex-start;
+    overflow: visible;
+  }
+  .hero-image {
+    position: absolute;
+    right: 0;
+  }
+  .hero-text {
+    text-align: left;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+  }
 }
 @media (min-width: 1200px) {
+  /* default styles */
+  .container {
+  }
+  .background-design i {
+    font-size: 20rem;
+  }
+  /* hero styes */
+  .hero {
+    margin: auto;
+    width: 980px;
+  }
 }
