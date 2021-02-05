@@ -15,6 +15,7 @@ body {
   width: 100%;
   max-width: 800px;
   margin: auto;
+  overflow: hidden;
 }
 
 h1,
@@ -183,7 +184,6 @@ i {
   /* #aboutme */
   /* specific styles for 320px */
   #aboutme {
-    background-color: green;
   }
   .aboutme-content {
     display: flex;
