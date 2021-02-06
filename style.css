@@ -54,6 +54,10 @@ i {
   display: none;
 }
 
+.fullWidth {
+  width: 100%;
+}
+
 /* specific defaults */
 
 .navbar {
@@ -73,12 +77,35 @@ i {
     display: none;
   }
 }
-@media only screen and (min-width: 280px) {
+@media (min-width: 280px) {
   /* boilerplate for 320px width screen */
+
+  .container {
+    position: relative;
+    z-index: 0;
+  }
   section {
     height: 100vh;
   }
 
+  .background-design {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    padding: 0.5rem;
+    z-index: -1;
+    top: 10%;
+    left: 0%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+
+    width: 5rem;
+
+    opacity: 0.3;
+  }
+  .background-design i {
+    font-size: 5rem;
+  }
   /* #homepage */
   /* default styles for 320px */
   .navbar {
@@ -96,7 +123,6 @@ i {
     margin-bottom: auto;
     text-align: center;
     overflow: hidden;
-    position: relative;
   }
 
   /* specific navbar content styles for 320px */
@@ -153,26 +179,6 @@ i {
     width: 70%;
     margin: 0 auto 0.5rem;
   }
-  /* icons */
-
-  .background-design {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: absolute;
-    padding: 0.5rem;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    z-index: -1;
-    height: 100%;
-    width: 5rem;
-
-    opacity: 0.3;
-  }
-  .background-design i {
-    font-size: 5rem;
-  }
 
   /* buttons */
 
@@ -203,7 +209,7 @@ i {
     width: 120px;
   }
 }
-@media (min-width: 480px) and (orientation: portrait) {
+@media (min-width: 480px) {
   /* #homepage  - nav */
 
   /* #homepage  - hero */
@@ -242,7 +248,7 @@ i {
 
   /* #homepage - navbar */
   .background-design i {
-    font-size: 5rem;
+    font-size: 10rem;
   }
   .navbar-logo {
     margin-left: 1rem;
@@ -309,17 +315,19 @@ i {
 }
 @media (min-width: 980px) {
   /* default styles */
+
   .container {
     max-width: 90%;
+    position: relative;
   }
   #home {
     position: relative;
   }
   .background-design {
     position: absolute;
-    bottom: 35%;
+    top: 60%;
     left: 15%;
-    transform: translate(-50%, -35%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
     clear: both;
   }
   .background-design i {
@@ -355,16 +363,6 @@ i {
     z-index: 1;
   }
 }
+
 @media (min-width: 1200px) {
-  /* default styles */
-  .container {
-  }
-  .background-design i {
-    font-size: 20rem;
-  }
-  /* hero styes */
-  .hero {
-    margin: auto;
-    width: 980px;
-  }
 }
